@@ -1,5 +1,4 @@
 let mongoose = require("mongoose");
-let db = require("../models/exercise");
 require("dotenv").config();
 
 let uri =

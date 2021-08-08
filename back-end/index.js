@@ -1,51 +1,30 @@
 require("dotenv").config();
-const Realm = require("realm")
-const express = require("express");
-const app = express();
-const expressGraphQL = require('express-graphql').graphqlHTTP;
-let mongoose = require("mongoose");
-const schema = require("./schema");
+const { ApolloServer } = require("apollo-server");
+const mongoose = require("mongoose");
 
+const typeDefs = require("./graphql/typeDefs");
+const resolvers = require("./graphql/resolvers/restaurants");
 
-//set view engine
 const uri =
 	process.env.MONGODB_URI || "mongodb://localhost:27017/sample_restaurants";
 
-// app.get(
-// 	"/restaurants",
-// 	ExpressGraphQL({
-// 		schema,
-// 		graphiql: true,
-// 	})
-// );
-app.use(
-	"/graphql",
-	expressGraphQL({
-		schema,
-		graphiql: true,
-	})
-);
-const mongoApp = new Realm.App({ id: "rydersrally-vdnpe" });
-const credentials = Realm.Credentials.anonymous();
+const PORT = 5000;
 
-
-
+const server = new ApolloServer({
+	typeDefs,
+	resolvers,
+});
 
 mongoose
-	.connect(uri, {
-		// auth: {
-		// 	user: "",
-		// 	password: "",
-		// },
-		useNewUrlParser: true,
-		useFindAndModify: false,
-		useUnifiedTopology: true,
-		useCreateIndex: true,
+	.connect(uri, { useNewUrlParser: true })
+	.then(() => {
+		console.log("MongoDB Connected");
+		console.log(uri);
+		return server.listen({ port: PORT });
 	})
-	.then(() => console.log("connected to the db"))
-	.catch((err) => console.log(err));
-
-const server = app.listen(5000, function () {
-	console.log("Node server is running..");
-	console.log(uri);
-});
+	.then((res) => {
+		console.log(`Server running at ${res.url}`);
+	})
+	.catch((err) => {
+		console.error(err);
+	});
