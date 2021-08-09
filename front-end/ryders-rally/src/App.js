@@ -1,8 +1,5 @@
-import "./App.css";
-import * as Realm from "realm-web";
-import Search from "./components/Search";
-import Events from "./components/Events"
-import Restaurant from "./components/SearchResults";
+import "./App.scss";
+import Home from "./components/Home"
 
 
 
@@ -11,9 +8,8 @@ function App() {
 	
 	return (
 		<div className="App">
-			<Search />
-			<Events />
-			<Restaurant  />
+			<Home />
+		
 		</div>
 	);
 }

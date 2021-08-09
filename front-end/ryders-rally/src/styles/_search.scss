@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
+
+#content {
+	padding: 25% 25% 5%;
+}
+
+.search-form {
+	border-radius: 20px;
+	background-color: rgba(218, 216, 216, 0.7);
+	height: 40px;
+	width: 75%;
+	margin: 50px;
+}
+
+.input-group {
+	width: 100%;
+}
+
+input-group-btn {
+	max-width: 38px;
+}
+
+#search {
+	border: 2px solid black;
+}
+
+.search-btn {
+	cursor: pointer;
+	border-radius: 20px;
+	background-color: rgba(185, 184, 184, 0.7);
+	color: #669;
+}
+
+.text-center {
+	color: rgba(175, 95, 4, 0.7);
+	font-size: 50px;
+	font-weight: 100px;
+	font-family: "Merienda", cursive;
+	margin-left: 150px;
+	margin-top: 0;
+}
+.fa-search {
+	position: absolute;
+	padding-top: 10px;
+	padding-left: 5px;
+}

@@ -1,12 +1,12 @@
 const { gql } = require("apollo-server");
 
 module.exports = gql`
-	type Restaurant {
-		borough: String
-		cuisine: String
+	type Club {
 		name: String
+		city: String
+		state: String
 	}
 	type Query {
-		getRestaurants: [Restaurant]
+		getClubs: [Club]
 	}
 `;

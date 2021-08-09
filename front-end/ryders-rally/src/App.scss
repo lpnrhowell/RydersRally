@@ -1,0 +1,10 @@
+@use 'styles/_home.scss';
+@use 'styles/_search.scss';
+
+.App {
+	height: 100vh;
+	width: 100vw;
+	background-image: url("https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2021/media-card/sportster-s-homepage-media-card.jpg?impolicy=myresize&rw=800");
+	background-repeat: no-repeat;
+	background-size: contain;
+}

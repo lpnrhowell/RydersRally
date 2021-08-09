@@ -3,10 +3,9 @@ const { ApolloServer } = require("apollo-server");
 const mongoose = require("mongoose");
 
 const typeDefs = require("./graphql/typeDefs");
-const resolvers = require("./graphql/resolvers/restaurants");
+const resolvers = require("./graphql/resolvers/clubs");
 
-const uri =
-	process.env.MONGODB_URI || "mongodb://localhost:27017/sample_restaurants";
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/ryders_rally";
 
 const PORT = 5000;
 
