@@ -8,7 +8,8 @@ function Home () {
   return(
     <div className="homePage">
       <Header/>
-     <Search/> 
+     <Search/>
+     <Sharing/> 
     </div>
   )
 }
