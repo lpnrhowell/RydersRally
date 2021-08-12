@@ -1,16 +1,13 @@
+import React, { Component } from 'react';
 import { gql, useQuery } from '@apollo/client';
 
 
-
-
-function Home () {
+function Sharing () {
     return(
-      <div className="homePage">
-        <Header/>
-       <Search/> 
-       facebookBtn.setAttribute("href", `https://www.facebook.com/sharer/sharer.php?u=${postURL}`);
-twitterBtn.setAttribute("href", `https://twitter.com/share?url${postURL}&text=${postTitle}`);
+      <div className="share-btn-container">
+        <Footer/>
+        <Sharing/>
       </div>
     )
   }
-  export default Home;
+  export default Sharing;
