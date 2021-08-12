@@ -4,6 +4,7 @@ const clubSchema = new Schema({
 	name: String,
 	city: String,
 	state: String,
+	contactinfo: String
 
 });
 
