@@ -5,7 +5,6 @@ const clubSchema = new Schema({
 	city: String,
 	state: String,
 	contactinfo: String
-
 });
 
 module.exports = model("Clubs", clubSchema);
