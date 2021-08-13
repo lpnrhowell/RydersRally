@@ -1,4 +1,6 @@
 const { AuthenticationError, UserInputError } = require("apollo-server");
+const bcrypt = require("bcryptjs");
+
 
 const Club = require("../../models/Club");
 
