@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { Grid, Transition } from 'semantic-ui-react';
 import { AuthContext } from '../context/auth';
 import { FETCH_CLUBS_QUERY } from '../helper/graphql';
+import Sharing from"./Sharing"
 import "../styles/_home.scss"
 
 function Home() {
@@ -41,7 +42,7 @@ function Home() {
             )}
         </Grid.Row>
       </Grid>
-
+<Sharing />
     </div>
   );
 }

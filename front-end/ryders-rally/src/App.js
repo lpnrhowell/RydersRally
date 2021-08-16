@@ -5,7 +5,6 @@ import { Container } from 'semantic-ui-react';
 
 import { useState } from "react";
 import "./App.scss";
-import Home from "./components/Home"
 
 
 import 'semantic-ui-css/semantic.min.css';
@@ -18,6 +17,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
+import Sharing from './components/Sharing';
 
 
 function App() {
@@ -30,7 +30,6 @@ function App() {
           <Route exact path="/" component={Home} />
           <AuthRoute exact path="/login" component={Login} />
           <AuthRoute exact path="/register" component={Register} />
-          {/* <Route exact path="/posts/:postId" component={SinglePost} /> */}
         </Container>
       </Router>
     </AuthProvider>
