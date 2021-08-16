@@ -22,8 +22,27 @@ module.exports = gql`
 	type Query {
 		getClubs: [Club]
 	}
+
+	type Member {
+		name: String
+		serviceYears: String
+	}
+	type Query {
+		getMembers: [Member]
+	}
+	type Charity {
+		name: String
+		date: String
+		description: String
+		features: String
+	}
+	type Query {
+		getCharities: [Charity]
+	}
+
 	type Mutation {
 		register(registerInput: RegisterInput): User!
 		login(username: String!, password: String!): User!
 	}
 `;
+

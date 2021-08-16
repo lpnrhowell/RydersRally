@@ -1,6 +1,12 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
+
+import { useState } from "react";
+import "./App.scss";
+import Home from "./components/Home"
+
 
 import 'semantic-ui-css/semantic.min.css';
 import './App.scss';
@@ -15,6 +21,7 @@ import Register from './components/Register';
 
 
 function App() {
+
   return (
     <AuthProvider>
       <Router>
@@ -28,6 +35,7 @@ function App() {
       </Router>
     </AuthProvider>
   );
+
 }
 
 export default App;

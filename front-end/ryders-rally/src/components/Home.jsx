@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { Grid, Transition } from 'semantic-ui-react';
@@ -40,6 +41,7 @@ function Home() {
             )}
         </Grid.Row>
       </Grid>
+
     </div>
   );
 }
