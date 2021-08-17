@@ -5,7 +5,7 @@ import "../styles/_sharing.scss";
 export default function SharingBar() {
     return (
         <footer>
-            <div class="share-btn-container">
+            <div className="share-btn-container" id="share">
                 <a href="#" class="facebook-btn">
                     <i class="fab fa-facebook"></i>
                 </a>
