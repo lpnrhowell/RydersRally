@@ -14,12 +14,13 @@ function Nav() {
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
-  const Nav = user ? (
+  const nav = user ? (
     <Menu pointing secondary size="massive" color="teal">
       <Menu.Item name={user.username} active as={Link} to="/" />
 
       <Menu.Menu id="navLink" position="right">
-        <Menu.Item name="logout" onClick={logout} />
+        <Menu.Item name="Create Event" id="item" />
+        <Menu.Item name="logout" id="item" onClick={logout} />
       </Menu.Menu>
     </Menu>
   ) : (
@@ -56,7 +57,7 @@ function Nav() {
       </Menu>
     );
 
-  return Nav;
+  return nav;
 }
 
 export default Nav;

@@ -1,25 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
-
-
-    
+   
 .share-btn-container {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    position: fixed;
-    top: 50%;
-    transform: translateY();
+background: white !important;
+display: flex;
+flex-direction: column;
+padding: 16px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+position: fixed;
+top: 50%;
+left: 0%;
+transform: translateY();
 }
 
 .share-btn-container a i {
-    font-size: 32px;
+font-size: 32px;
 }
 
 .share-btn-container a {
-    margin: 12px 0;
-    transition: 500ms;
+margin: 12px 0;
+transition: 500ms;
+}
+
+.share-btn-container a:hover {
+transform: scale(1.2);
+}
+
+.share-btn-container .fa-facebook {
+color: #3b5998;
+}
+
+.share-btn-container .fa-twitter {
+color: #188ed8;
+}
+
+.share-btn-container .fa-instagram {
+color: #ff4500;
+
+}
+
+.share-btn-container a i {
+font-size: 32px;
+}
+
+.share-btn-container a {
+margin: 12px 0;
+transition: 500ms;
 }
 
 .share-btn-container a:hover {
@@ -31,10 +56,10 @@
 }
 
 .share-btn-container .fa-twitter {
-    color: #188ed8;
+color: #188ed8;
 }
 
 .share-btn-container .fa-instagram {
-    color: #ff4500;
+color: #ff4500;
 
 }

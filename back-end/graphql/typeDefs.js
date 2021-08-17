@@ -19,30 +19,48 @@ module.exports = gql`
 		confirmPassword: String!
 		email: String!
 	}
+	input EventInput {
+		name: String!
+		city_state: String!
+		venue: String!
+		ticket_price: String!
+		img: String
+	}
+
 	type Query {
 		getClubs: [Club]
+		getEvents: [Event]
+		getCharity: [Charity]
+	}
+	type Event{
+		name: String!
+		location: String!
+		city_state: String!
+		venue: String!
+		contactinfo: String!
+		ticket_price: String!
+		img: String
 	}
 
 	type Member {
 		name: String
 		serviceYears: String
 	}
-	type Query {
-		getMembers: [Member]
-	}
+	
 	type Charity {
 		name: String
 		date: String
 		description: String
 		features: String
 	}
-	type Query {
-		getCharities: [Charity]
-	}
-
+	
 	type Mutation {
 		register(registerInput: RegisterInput): User!
 		login(username: String!, password: String!): User!
+		createEvent(eventInput: EventInput): Event!
 	}
 `;
+
+
+
 

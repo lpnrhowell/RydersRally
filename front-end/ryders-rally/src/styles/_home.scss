@@ -4,6 +4,14 @@
   font-size: 40px;
 }
 
-// .hmTest {
-// 	color: red;
-// }
+.eventContainer{
+  background-color: rgba(190, 146, 24, 0.6);
+  border: 3px solid rgb(192, 192, 192);
+  box-shadow: 12px 12px 2px 1px rgba(56, 218, 247, 0.2);
+  font-family: "Merienda", cursive  !important;
+  width: 300px;
+}
+.event{
+  margin: 10px 20px 10px 20px;
+}
+
