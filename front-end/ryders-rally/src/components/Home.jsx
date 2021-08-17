@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 import { Grid, Transition, Image } from 'semantic-ui-react';
 import { AuthContext } from '../context/auth';
 import { FETCH_EVENTS_QUERY } from '../helper/graphql';
-import Sharing from "./Sharing"
+import Sharing from "./Sharing.jsx"
 import "../styles/_home.scss"
 
 function Home() {

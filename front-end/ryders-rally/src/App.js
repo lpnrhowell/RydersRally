@@ -17,7 +17,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
-import Sharing from './components/Sharing';
+import Sharing from './components/Sharing.jsx';
 
 
 function App() {
