@@ -19,7 +19,7 @@ function Nav() {
       <Menu.Item name={user.username} active as={Link} to="/" />
 
       <Menu.Menu id="navLink" position="right">
-        <Menu.Item name="Create Event" id="item" />
+        <Menu.Item name="Create Event" id="item" as={Link} to="/createEvent" onClick={handleItemClick}/>
         <Menu.Item name="logout" id="item" onClick={logout} />
       </Menu.Menu>
     </Menu>
