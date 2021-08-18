@@ -3,14 +3,14 @@
 @use 'styles/_login.scss';
 @use 'styles/_nav.scss';
 @use 'styles/_sharing.scss';
+@use 'styles/event.scss';
 
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap");
 
 .App {
 	height: 100vh;
 	width: 100vw;
-background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLDYgu6ytvh-gmIbny9tUbstrHichnTrxPTWm3F9M3BcbALVwOAuCE8HqnRXkdEWuHnY&usqp=CAU');
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLDYgu6ytvh-gmIbny9tUbstrHichnTrxPTWm3F9M3BcbALVwOAuCE8HqnRXkdEWuHnY&usqp=CAU");
 
-	
 	// background-size: contain;
 }

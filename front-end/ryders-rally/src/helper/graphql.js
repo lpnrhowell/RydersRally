@@ -23,4 +23,5 @@ getEvents {
 }
 }
 `;
+
 // export const FETCH_USER_QUERY = 
