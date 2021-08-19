@@ -19,3 +19,6 @@ Follow the link to our deployed application, register credentials, and use the i
 
 For developers:
 Download the repository, configure Node. Configure mongodb and create a new database "ryders_rally". run npm i in src/index.js and server/index.js in the terminal. Then run npm start in those paths. You should now have a local instance of RydersRally.
+
+![image](https://user-images.githubusercontent.com/79435941/129994180-7e737f06-9bf7-4492-8318-580bd10f347d.png)
+
