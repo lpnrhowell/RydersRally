@@ -19,6 +19,9 @@ app.get("*", (req, res) => {
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
+	context: ( Context) => ctx,
+	playground: true,
+	introspection: true,
 	plugins: [ApolloServerPluginLandingPageDisabled()],
 });
 
