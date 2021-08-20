@@ -1,13 +1,21 @@
 require("dotenv").config();
-
+const express = require("express");
+const app = express();
 const { ApolloServer } = require("apollo-server");
 const mongoose = require("mongoose");
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
+const path = require("path");
 
 const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/ryders_rally";
 
 const PORT = 5000;
+
+app.use(express.static(path.join(__dirname, "ryders-rally", "build")));
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "ryders-rally", "build", "index.html"));
+});
 
 const server = new ApolloServer({
 	typeDefs,
