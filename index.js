@@ -9,8 +9,6 @@ const path = require("path");
 
 const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/ryders_rally";
 
-const PORT = 5000;
-
 app.use(express.static(path.join(__dirname, "ryders-rally", "build")));
 
 app.get("*", (req, res) => {
@@ -27,7 +25,7 @@ mongoose
 	.then(() => {
 		console.log("DB is Connected");
 		console.log(uri);
-		return server.listen({ port: PORT });
+		return server.listen(process.env.PORT || 5000);
 	})
 	.then((res) => {
 		console.log(`Server is now running at ${res.url}`);
