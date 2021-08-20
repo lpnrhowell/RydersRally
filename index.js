@@ -9,8 +9,6 @@ const path = require("path");
 
 const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/ryders_rally";
 
-const PORT = 5000;
-
 app.use(express.static(path.join(__dirname, "ryders-rally", "build")));
 
 app.get("*", (req, res) => {
