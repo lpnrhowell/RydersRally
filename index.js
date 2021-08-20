@@ -27,7 +27,7 @@ mongoose
 	.then(() => {
 		console.log("DB is Connected");
 		console.log(uri);
-		return server.listen({ port: PORT });
+		return server.listen(process.env.PORT || 5000);
 	})
 	.then((res) => {
 		console.log(`Server is now running at ${res.url}`);
