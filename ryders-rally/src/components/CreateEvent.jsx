@@ -33,13 +33,22 @@ const CreateEvent = (props) =>{
       values.ticket_price = '';
       values.city_state = '';
       values.venue = '';
-    }
+      
+    }, 
+   
+    onError(err) {
+      setErrors(err.graphQLErrors[0].extensions.exception.errors);
+    },
+   
   
-  } );
+    }
+   );
 
   function createEvent() {
     addEvent();
+   
   }
+   
 
   return (
     <div className="form-container">
