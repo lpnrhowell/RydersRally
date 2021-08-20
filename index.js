@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const { ApolloServer } = require("apollo-server");
+const { ApolloServerPluginLandingPageDisabled } = require("apollo-server-core");
 const mongoose = require("mongoose");
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
