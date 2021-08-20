@@ -19,7 +19,8 @@ app.get("*", (req, res) => {
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
-	plugins: [ApolloServerPluginLandingPageDisabled()],
+	introspection: true,
+	playground: true,
 });
 
 mongoose
