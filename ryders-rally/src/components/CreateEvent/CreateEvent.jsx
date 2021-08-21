@@ -2,11 +2,11 @@ import React, { useContext, useState } from 'react';
 import { Button, Form } from 'semantic-ui-react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-import { FETCH_EVENTS_QUERY } from '../helper/graphql';
+import { FETCH_EVENTS_QUERY } from '../../helper/graphql';
 
 
-import { AuthContext } from '../context/auth';
-import { useForm } from '../helper/hooks';
+import { AuthContext } from '../../context/auth';
+import { useForm } from '../../helper/hooks';
 
 const CreateEvent = (props) =>{
   const context = useContext(AuthContext);

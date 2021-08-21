@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Grid} from 'semantic-ui-react';
-import { AuthContext } from '../context/auth';
-import Sharing from "./Sharing.jsx";
-import Events from './Events';
-import "../_home.scss"
+import { AuthContext } from '../../context/auth';
+import Sharing from "../Sharing/Sharing.jsx";
+import Events from '../Events/Events';
+import "/_home.scss"
 
 
 function Home() {
