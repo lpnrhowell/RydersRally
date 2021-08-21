@@ -3,7 +3,7 @@ import { Grid} from 'semantic-ui-react';
 import { AuthContext } from '../context/auth';
 import Sharing from "./Sharing.jsx";
 import Events from './Events';
-import "../styles/_home.scss"
+import "../_home.scss"
 
 
 function Home() {

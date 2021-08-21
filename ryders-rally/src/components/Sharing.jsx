@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/_sharing.scss";
+import "../_sharing.scss";
 
 
 export default function SharingBar() {

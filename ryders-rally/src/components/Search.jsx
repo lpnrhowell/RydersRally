@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/_search.scss";
+import "../_search.scss";
 
 export default function SearchAppBar() {
 	return (

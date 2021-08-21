@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../styles/_home.scss";
+import "../_home.scss";
 
 
 function Donate () {
