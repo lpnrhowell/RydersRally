@@ -9,7 +9,7 @@ body {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLDYgu6ytvh-gmIbny9tUbstrHichnTrxPTWm3F9M3BcbALVwOAuCE8HqnRXkdEWuHnY&usqp=CAU') !important;
   /* background-repeat: no-repeat; */
   background-size: cover;
-
+  background-attachment: fixed;
 }
 
 #root {
