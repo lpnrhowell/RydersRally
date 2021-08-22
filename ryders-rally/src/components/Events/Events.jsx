@@ -1,9 +1,9 @@
 import React, {useContext}from 'react';
-import { FETCH_EVENTS_QUERY } from '../helper/graphql';
-import { AuthContext } from '../context/auth';
+import { FETCH_EVENTS_QUERY } from '../../helper/graphql';
+import { AuthContext } from '../../context/auth';
 import { useQuery } from '@apollo/react-hooks';
 import { Grid, Transition, Image } from 'semantic-ui-react';
-import "../styles/_event.scss"
+import "/_event.scss"
 
 
 function Events() {

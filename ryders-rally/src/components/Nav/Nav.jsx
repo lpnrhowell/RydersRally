@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import "../styles/_nav.scss"
+import "/_nav.scss"
 
-import { AuthContext } from '../context/auth';
+import { AuthContext } from '../../context/auth';
 
 function Nav() {
   const { user, logout } = useContext(AuthContext);
