@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const { ApolloServer } = require("apollo-server");
+const { ApolloServer } = require("apollo-server-express");
 const mongoose = require("mongoose");
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
@@ -15,32 +15,29 @@ app.get("*", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
-const server = new ApolloServer({
-	typeDefs,
-	resolvers,
-	introspection: true,
-	playground: true,
-});
+// const server = new ApolloServer({
+// 	typeDefs,
+// 	resolvers,
+// });
+async function startApolloServer(typeDefs, resolvers) {
+	const server = new ApolloServer({ typeDefs, resolvers });
 
+	await server.start();
+	server.applyMiddleware({ app, path: "/graphql" });
 
-server.applyMiddleware({
-	path: "/ryders-rally", // you should change this to whatever you want
-	app,
-});
-
-app.listen({ port: process.env.PORT || 4000 }, () => {
-	console.log(`🚀  Server ready at http://localhost:4000`);
-});
+	app.listen(process.env.PORT, () => {
+		console.log(
+			`Server is listening on port ${process.env.PORT}${server.graphqlPath}`
+		);
+	});
+}
 
 mongoose
 	.connect(uri, { useNewUrlParser: true })
 	.then(() => {
 		console.log("DB is Connected");
 		console.log(uri);
-		return server.listen(process.env.PORT || 5000);
-	})
-	.then((res) => {
-		console.log(`Server is now running at ${res.url}`);
+		return startApolloServer(typeDefs, resolvers);
 	})
 	.catch((err) => {
 		console.error(err);
