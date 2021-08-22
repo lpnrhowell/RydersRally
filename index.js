@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const { ApolloServer } = require("apollo-server");
-const { ApolloServerPluginLandingPageDisabled } = require("apollo-server-core");
 const mongoose = require("mongoose");
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
@@ -23,12 +22,22 @@ const server = new ApolloServer({
 	playground: true,
 });
 
+
+server.applyMiddleware({
+	path: "/ryders-rally", // you should change this to whatever you want
+	app,
+});
+
+app.listen({ port: process.env.PORT || 4000 }, () => {
+	console.log(`🚀  Server ready at http://localhost:4000`);
+});
+
 mongoose
 	.connect(uri, { useNewUrlParser: true })
 	.then(() => {
 		console.log("DB is Connected");
 		console.log(uri);
-		return server.listen("/graphql", process.env.PORT || 5000);
+		return server.listen(process.env.PORT || 5000);
 	})
 	.then((res) => {
 		console.log(`Server is now running at ${res.url}`);
