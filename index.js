@@ -10,10 +10,10 @@ const path = require("path");
 
 const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/ryders_rally";
 
-app.use(express.static(path.join(__dirname, "ryders-rally", "build")));
+app.use(express.static("public"));
 
 app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "ryders-rally", "build", "index.html"));
+	res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
 const server = new ApolloServer({
@@ -28,7 +28,7 @@ mongoose
 	.then(() => {
 		console.log("DB is Connected");
 		console.log(uri);
-		return server.listen(process.env.PORT || 5000);
+		return server.listen("/graphql", process.env.PORT || 5000);
 	})
 	.then((res) => {
 		console.log(`Server is now running at ${res.url}`);
