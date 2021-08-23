@@ -8,19 +8,25 @@ RydersRally is a full stack MERN application that allows motorcycle clubs to com
 
 ## Table of Contents
 
-- [Technologies Used](#technologies used)
+- [Technologies](#technologies)
 - [Instructions](#instructions)
 - [Credits](#credits)
 - [License](#license)
 
 
-### Technologies Used
+### Technologies
 MongoDB
+
 Mongoose ODM
+
 GraphQL
+
 Node.js
+
 React.js
+
 Express.js
+
 Stripe
 
 #### Instructions
@@ -36,8 +42,12 @@ Download the repository, configure Node. Configure mongodb and create a new data
 ### Credits
 
 Patrick Devaney https://github.com/patrickbdevaney patrickbdevaney@gmail.com
+
 Robert Howell https://github.com/lpnrhowell lpnrhowell@gmail.com
+
 Nelson Rosado https://github.com/NMR-Code nelsonog827@gmail.com
+
 Joseph Valancy https://github.com/Jvala2 joevalancy@gmail.com
+
 
 - [License](https://opensource.org/liscenses/MIT)
