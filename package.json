@@ -1,34 +1,25 @@
 {
-  "name": "project-3-um",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lpnrhowell/RydersRally.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lpnrhowell/RydersRally/issues"
-  },
-  "homepage": "https://github.com/lpnrhowell/RydersRally#readme",
-  "dependencies": {
-    "apollo-server": "^3.1.2",
-    "apollo-server-core": "^3.1.2",
-    "apollo-server-express": "^3.1.2",
-    "axios": "^0.21.1",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "express-openid-connect": "^2.5.0",
-    "graphql": "^15.5.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.5"
-  }
+	"name": "ryders-rally",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server/server.js",
+	"scripts": {
+		"start": "babel server/server.js",
+		"develop": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+		"install": "cd server && npm i && cd ../client && npm i",
+		"seed": "cd server && npm run seed",
+		"build": "cd client && npm run build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/cli": "^7.14.8",
+		"@babel/core": "^7.15.0",
+		"@babel/node": "^7.14.9",
+		"@babel/preset-env": "^7.15.0",
+		"@babel/preset-react": "^7.14.5",
+		"concurrently": "^5.1.0",
+		"nodemon": "^2.0.12"
+	}
 }
